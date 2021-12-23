@@ -36,7 +36,7 @@ main {
 }
 
 #funcionamento {
-  margin-top: -10px;
+  margin-top: -5px;
   font-size: 26px;
   color: #02335e;
 }
@@ -69,6 +69,7 @@ label {
 
 .item-tarefas {
   font-size: 20px;
+  margin-bottom: 4px;
 }
 
 .completed {
