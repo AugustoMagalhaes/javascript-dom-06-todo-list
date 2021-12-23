@@ -31,10 +31,16 @@ main {
   color: #064275;
 }
 
-#texto-tarefa {
-  width: 23%;
-}
-
 label {
   font-size: 18px;
+  padding-top: 1000px;  
+}
+
+#texto-tarefa {
+  width: 23%;
+  margin-top: 10px;
+}
+
+#ol-container {
+  margin: 5px;
 }
