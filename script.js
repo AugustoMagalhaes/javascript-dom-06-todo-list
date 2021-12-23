@@ -24,19 +24,22 @@ function addTask() {
 }
 
 createTaskBtn.addEventListener('click', addTask);
-inputTask.addEventListener('keypress', function(event) {
+inputTask.addEventListener('keypress', function (event) {
   if (event.key === 'Enter') {
     addTask();
   }
 });
 
 function selectTask(event) {
-  const taskElement = event.target;
-  const taskElementColor = window.getComputedStyle(taskElement, null).getPropertyValue('background-color');
-  taskElement.style.backgroundColor = (taskElementColor === 'rgb(128, 128, 128)') ? 'rgba(0, 0, 0, 0)' : 'rgb(128, 128, 128';
-  for (let task of taskListItems) {
+  const taskElement = event.target;  
+  if (taskElement.id === 'selected') {
+    taskElement.removeAttribute('id', 'selected');
+  } else {
+    taskElement.setAttribute('id', 'selected');
+  }
+  for (const task of taskListItems) {
     if (task !== event.target) {
-      task.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+      task.removeAttribute('id', 'selected');
     }
   }
 }
@@ -46,10 +49,10 @@ function decorateFinishedTask(event) {
   const finishedElementClasses = finishedElement.classList;
   if (finishedElementClasses.length > 1) {
     finishedElement.className = finishedElementClasses[0];
-    finishedElement.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+    finishedElement.removeAttribute('id', 'selected');
   } else {
     finishedElement.className += ' ' + 'completed';
-    finishedElement.style.backgroundColor = 'rgb(128, 128, 128)';
+    finishedElement.setAttribute('id', 'selected');
   }
 }
 
@@ -72,3 +75,43 @@ function removeFinishedTasks() {
 
 const removeFinishedTasksBtn = document.getElementById('remover-finalizados');
 removeFinishedTasksBtn.addEventListener('click', removeFinishedTasks);
+
+function moveUpTask() {
+  if (document.getElementById('selected') === null) {
+    return;
+  }
+  const selectedItem = document.getElementById('selected');
+  const previousElement = selectedItem.previousElementSibling;
+  if (previousElement !== null) {
+    selectedItem.parentNode.insertBefore(selectedItem, previousElement);
+  }
+}
+
+// fonte: https://stackoverflow.com/questions/2698793/swapping-li-elements-with-replacechild-possible
+
+function moveDownTask() {
+  if (document.getElementById('selected') === null) {
+    return;
+  }
+  const selectedItem = document.getElementById('selected');
+  const nextElement = selectedItem.nextElementSibling;
+  if (nextElement !== null) {
+    selectedItem.parentNode.insertBefore(nextElement, selectedItem);
+  }
+}
+
+const moveUpBtn = document.getElementById('mover-cima');
+moveUpBtn.addEventListener('click', moveUpTask);
+
+const moveDownBtn = document.getElementById('mover-baixo');
+moveDownBtn.addEventListener('click', moveDownTask);
+
+function removeSelected() {
+  const selectedItem = document.getElementById('selected');
+  if (selectedItem !== null) {
+    taskList.removeChild(selectedItem);
+  }
+}
+
+const removeSeletecItemBtn = document.getElementById('remover-selecionado');
+removeSeletecItemBtn.addEventListener('click', removeSelected);

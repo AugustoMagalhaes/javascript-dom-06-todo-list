@@ -2,15 +2,6 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
-#tamanho-tela {
-  position: absolute;
-  height: 768px;
-  width: 1388px;
-  border: 2px solid white;
-  margin-top: -20px;
-  z-index: -1;
-}
-
 body {
   background-color: #04143d;
 }
@@ -70,6 +61,10 @@ label {
 .item-tarefas {
   font-size: 20px;
   margin-bottom: 4px;
+}
+
+#selected {
+  background-color: rgb(128, 128, 128);
 }
 
 .completed {
