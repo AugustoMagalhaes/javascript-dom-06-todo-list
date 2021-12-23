@@ -32,15 +32,22 @@ main {
 }
 
 label {
-  font-size: 18px;
-  padding-top: 1000px;  
+  font-size: 18px;    
 }
 
 #texto-tarefa {
   width: 23%;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
-#ol-container {
+#criar-tarefa {
+  background-color: #b44949;
+  color: #f0f8ff;
+  border: 1px solid #b44949;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#lista-container {
   margin: 5px;
 }
