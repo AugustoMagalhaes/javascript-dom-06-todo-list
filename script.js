@@ -8,10 +8,11 @@ function addTask() {
   newTaskListElement.className = 'item-tarefas';
   newTaskListElement.innerText = inputTask.value;
   newTaskListElement.addEventListener('click', selectTask);
+  newTaskListElement.addEventListener('dblclick', decorateFinishedTask);
 
   try {
     if (inputTask.value.length === 0) throw 'Digite uma tarefa válida';
-    if (parseFloat(inputTask.value) == inputTask.value) throw 'Digite uma tarefa como texto';
+    if (parseFloat(inputTask.value) == inputTask.value) throw 'Digite uma tarefa apenas como texto';
   } catch (error) {
     alert(error);
     inputTask.value = '';
@@ -19,7 +20,6 @@ function addTask() {
   }
   taskList.appendChild(newTaskListElement);
   inputTask.value = '';
-  
 }
 
 createTaskBtn.addEventListener('click', addTask);
@@ -40,5 +40,15 @@ function selectTask(event) {
   }
 }
 
-
-
+function decorateFinishedTask(event) {
+  const finishedElement = event.target;
+  const finishedElementClasses = finishedElement.classList;
+  if (finishedElementClasses.length > 1) {
+    finishedElement.className = finishedElementClasses[0];
+    finishedElement.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+  } else {
+    finishedElement.className += ' ' + 'completed';
+    finishedElement.style.backgroundColor = 'rgb(128, 128, 128)';
+  }
+  
+}
