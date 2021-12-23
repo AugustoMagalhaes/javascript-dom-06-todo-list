@@ -50,5 +50,4 @@ function decorateFinishedTask(event) {
     finishedElement.className += ' ' + 'completed';
     finishedElement.style.backgroundColor = 'rgb(128, 128, 128)';
   }
-  
 }

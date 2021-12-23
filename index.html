@@ -8,8 +8,9 @@
 </head>
 
 <body>
+  <div id='tamanho-tela'></div>
   <header>Minha Lista de Tarefas</header>
-  <main>
+  <main>    
     <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>
     <label for="texto-tarefa">Tarefa:</label>
     <input type="text" name="conteudo-tarefa" id="texto-tarefa" placeholder="Digite a tarefa a ser adicionada">
@@ -18,9 +19,16 @@
       <ol id="lista-tarefas">        
       </ol>
     </div>
+    <div id="bottom-btns">
+      <button id="remover-selecionado">X</button>
+      <button id="mover-cima">&#129073;</button>
+      <button id="mover-baixo">&#129075;</button>
+      <button id="remover-finalizados">Limpar Completas</button>
+      <button id="apaga-tudo">Limpar Lista</button>
+      <button id="salvar-tarefas">Salvar Lista</button>
+    </div>
   </main>
-
-
+  
   <script src="script.js"></script>
 </body>
 

@@ -2,6 +2,15 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
+#tamanho-tela {
+  position: absolute;
+  height: 768px;
+  width: 1388px;
+  border: 2px solid white;
+  margin-top: -20px;
+  z-index: -1;
+}
+
 body {
   background-color: #04143d;
 }
@@ -10,48 +19,119 @@ header {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 30px;
+  font-size: 36px;
   color: #dbdbf5;
 }
 
 main {
   background-color: #f0f8ff;
-  width: 60%;
-  height: 60%;
+  width: 70%;
+  height: 70%;
   display: inline-block;  
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 15%;
+  margin-right: 15%;
   border: 0px solid #f0f8ff;
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 20px;
 }
 
 #funcionamento {
-  font-size: 20px;
+  margin-top: -10px;
+  font-size: 26px;
   color: #02335e;
 }
 
 label {
-  font-size: 18px;    
+  font-size: 26px;
+  margin-top: -300px;
+  display: inline-block;
 }
 
 #texto-tarefa {
-  width: 23%;
-  margin-top: 0px;
+  width: 40%;  
+  padding-top: 2px;
+  font-size: 20px;
 }
 
-#criar-tarefa {
+#criar-tarefa {  
   background-color: #136b07;
   color: #f0f8ff;
   border: 1px solid #136b07;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 8px 10px;    
+  margin-left: 10px;
 }
 
 #lista-container {
   margin: 5px;
 }
 
+.item-tarefas {
+  font-size: 20px;
+}
+
 .completed {
   text-decoration: line-through solid rgb(0, 0, 0);
+}
+
+#bottom-btns {
+  padding: 10px 0px;
+}
+
+#bottom-btns button {  
+  height: auto;
+  width: auto;
+  border-radius: 10px;   
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+#remover-selecionado {
+  background-color: #ff0000;
+  color: #f0f8ff;
+  font-weight: 700;
+  border: 1px solid #ff0000;
+  padding: 7px 12px 7px 12px;    
+}
+
+#mover-cima {
+  background-color: #ffae00fd;
+  color: #f0f8ff;
+  font-weight: 700;
+  border: 1px solid #ffae00fd;
+  padding: 2px 12px 0px 12px;  
+}
+
+#mover-baixo {
+  background-color: #ffae00fd;
+  color: #f0f8ff;
+  font-weight: 700;
+  border: 1px solid #ffae00fd;
+  padding: 2px 12px 0px 12px;
+}
+
+#remover-finalizados {
+  background-color: rgb(128, 128, 128);
+  color: #f0f8ff;
+  font-weight: 700;
+  border: 1px solid rgb(128, 128, 128);
+  padding: 7px 12px 7px 12px; 
+}
+
+#apaga-tudo {
+  background-color: #be4900;
+  color: #f0f8ff;
+  font-weight: 700;
+  border: 1px solid #be4900;
+  padding: 7px 12px 7px 12px; 
+}
+
+#salvar-tarefas {
+  background-color: #0b518a;
+  color: #f0f8ff;
+  font-weight: 700;
+  border: 1px solid #0b518a;
+  padding: 7px 12px 7px 12px; 
 }
