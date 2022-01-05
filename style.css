@@ -54,7 +54,7 @@ label {
   margin-left: 10px;
 }
 
-#lista-container {
+#lista-tarefas {
   margin: 5px;
 }
 
@@ -63,7 +63,7 @@ label {
   margin-bottom: 4px;
 }
 
-#selected {
+.selected {
   background-color: rgb(128, 128, 128);
 }
 
