@@ -31,7 +31,7 @@ inputTask.addEventListener('keypress', function (event) {
 });
 
 function selectTask(event) {
-  const actualSelected = taskList.querySelector('.selected');
+  const actualSelected = taskList.getElementsByClassName('selected');
   const taskElement = event.target;
   /* if (taskElement.id === 'selected') {
     taskElement.removeAttribute('id', 'selected');
@@ -45,14 +45,13 @@ function selectTask(event) {
   } */
 
 
-  if (actualSelected !== null && actualSelected !== taskElement) {
-    actualSelected.classList.remove('selected');
+  if (actualSelected[0] && actualSelected[0] !== taskElement) {
+    actualSelected[0].classList.remove('selected');
     taskElement.classList.add('selected');
   } else {
     taskElement.classList.toggle('selected');
     //actualSelected.classList.remove('selected');    
   }
-
 }
 
 function decorateFinishedTask(event) {
@@ -90,11 +89,14 @@ const removeFinishedTasksBtn = document.getElementById('remover-finalizados');
 removeFinishedTasksBtn.addEventListener('click', removeFinishedTasks);
 
 function moveUpTask() {
-  const selectedUpItem = taskList.querySelector('.selected');
-  const previousUpItem = selectedUpItem.previousElementSibling;
-  if (selectedUpItem && previousUpItem) {
-    const parent = selectedUpItem.parentNode;
-    parent.insertBefore(selectedUpItem, previousUpItem);
+  if (!taskList.getElementsByClassName('selected')[0]) {
+    return;
+  }
+  const selectedUpItem = taskList.getElementsByClassName('selected');
+  const previousUpItem = selectedUpItem[0].previousElementSibling;  
+  if (selectedUpItem[0] && previousUpItem) {
+    const parent = selectedUpItem[0].parentNode;
+    parent.insertBefore(selectedUpItem[0], previousUpItem);
   }
 
   /* if (document.getElementById('selected') === null) {
@@ -110,11 +112,15 @@ function moveUpTask() {
 // fonte: https://stackoverflow.com/questions/2698793/swapping-li-elements-with-replacechild-possible
 
 function moveDownTask() {
-  const selectedDownItem = taskList.querySelector('.selected');
-  const nextDownItem = selectedDownItem.nextElementSibling;
-  if (selectedDownItem && nextDownItem) {
-    const parent = selectedDownItem.parentNode;
-    parent.insertBefore(nextDownItem, selectedDownItem);
+  if (!taskList.getElementsByClassName('selected')[0]) {
+    return;
+  }
+  const selectedDownItem = taskList.getElementsByClassName('selected');
+  if (!selectedDownItem) return;
+  const nextDownItem = selectedDownItem[0].nextElementSibling;
+  if (selectedDownItem[0] && nextDownItem) {
+    const parent = selectedDownItem[0].parentNode;
+    parent.insertBefore(nextDownItem, selectedDownItem[0]);
   }
 }
 
