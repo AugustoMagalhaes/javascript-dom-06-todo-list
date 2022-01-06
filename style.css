@@ -131,3 +131,11 @@ label {
   border: 1px solid #0b518a;
   padding: 7px 12px 7px 12px; 
 }
+
+#erase-storage {
+  background-color: #8a0b35;
+  color: #f0f8ff;
+  font-weight: 700;
+  border: 1px solid #0b518a;
+  padding: 7px 12px 7px 12px; 
+}
