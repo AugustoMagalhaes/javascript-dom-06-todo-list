@@ -125,7 +125,7 @@ moveUpBtn.addEventListener('click', moveUpTask);
 moveDownBtn.addEventListener('click', moveDownTask);
 
 function removeSelected() {
-  const selectedItem = document.getElementById('selected');
+  const selectedItem = document.getElementsByClassName('selected')[0];
   if (selectedItem !== null) {
     taskList.removeChild(selectedItem);
   }
