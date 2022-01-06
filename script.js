@@ -1,7 +1,6 @@
 const taskList = document.getElementById('lista-tarefas');
 const createTaskBtn = document.getElementById('criar-tarefa');
 const inputTask = document.getElementById('texto-tarefa');
-//const taskListItems = document.getElementsByClassName('item-tarefas');
 const finishedTasksList = document.getElementsByClassName('completed');
 const moveUpBtn = document.getElementById('mover-cima');
 const moveDownBtn = document.getElementById('mover-baixo');
@@ -39,25 +38,14 @@ function selectTask(event) {
   if (actualSelected[0] && actualSelected[0] !== taskElement) {
     actualSelected[0].classList.remove('selected');
     taskElement.classList.add('selected');
-  } else if (event.target === moveDownBtn || event.target === moveUpBtn) {
-    actualSelected.classList.remove('selected');
   } else {
     taskElement.classList.toggle('selected');
-    //actualSelected.classList.remove('selected');    
   }
 
 }
 
 function decorateFinishedTask(event) {
-  const finishedElement = event.target;
-  ///const finishedElementClasses = finishedElement.classList;
-  /* if (finishedElementClasses.length > 1) {
-    finishedElement.className = finishedElementClasses[0];
-    finishedElement.removeAttribute('id', 'selected');
-  } else {
-    finishedElement.className += ' ' + 'completed';
-    finishedElement.setAttribute('id', 'selected');
-  } */
+  const finishedElement = event.target;  
   finishedElement.classList.toggle('completed');
 }
 
