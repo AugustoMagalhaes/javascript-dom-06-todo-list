@@ -32,20 +32,16 @@ inputTask.addEventListener('keypress', function (event) {
 });
 
 function selectTask(event) {
-  const actualSelected = taskList.getElementsByClassName('selected');
   const taskElement = event.target;
-
-  if (actualSelected[0] && actualSelected[0] !== taskElement) {
-    actualSelected[0].classList.remove('selected');
-    taskElement.classList.add('selected');
-  } else {
-    taskElement.classList.toggle('selected');
+  for (let index = 0; index < taskList.childElementCount; index += 1) {
+    const itemLi = taskList.children[index];
+    itemLi.classList.remove('selected');
   }
-
+  taskElement.classList.add('selected');
 }
 
 function decorateFinishedTask(event) {
-  const finishedElement = event.target;  
+  const finishedElement = event.target;
   finishedElement.classList.toggle('completed');
 }
 
