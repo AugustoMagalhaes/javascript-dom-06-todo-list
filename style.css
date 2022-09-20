@@ -144,9 +144,34 @@ label {
   body {
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
   }
 
   header {
     font-size: 24px;
+  }
+
+  main {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 80%;
+    height: 400px;
+    border: 0px solid #f0f8ff;
+    border-radius: 15px;
+    padding: 20px;
+  }
+
+  #funcionamento {
+    font-size: 18px;
+  }
+
+  label {
+    font-size: 18px;
+  }
+
+  #texto-tarefa {
+    width: 40%;
+    padding-top: 2px;
+    font-size: 16px;
   }
 }
