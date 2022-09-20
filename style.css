@@ -18,7 +18,7 @@ main {
   background-color: #f0f8ff;
   width: 70%;
   height: 70%;
-  display: inline-block;  
+  display: inline-block;
   margin-left: 15%;
   margin-right: 15%;
   border: 0px solid #f0f8ff;
@@ -39,18 +39,18 @@ label {
 }
 
 #texto-tarefa {
-  width: 40%;  
+  width: 40%;
   padding-top: 2px;
   font-size: 20px;
 }
 
-#criar-tarefa {  
+#criar-tarefa {
   background-color: #136b07;
   color: #f0f8ff;
   border: 1px solid #136b07;
   border-radius: 10px;
   font-size: 20px;
-  padding: 8px 10px;    
+  padding: 8px 10px;
   margin-left: 10px;
 }
 
@@ -75,10 +75,10 @@ label {
   padding: 10px 0px;
 }
 
-#bottom-btns button {  
+#bottom-btns button {
   height: auto;
   width: auto;
-  border-radius: 10px;   
+  border-radius: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
   font-size: 20px;
@@ -89,7 +89,7 @@ label {
   color: #f0f8ff;
   font-weight: 700;
   border: 1px solid #ff0000;
-  padding: 7px 12px 7px 12px;    
+  padding: 7px 12px 7px 12px;
 }
 
 #mover-cima {
@@ -97,7 +97,7 @@ label {
   color: #f0f8ff;
   font-weight: 700;
   border: 1px solid #ffae00fd;
-  padding: 2px 12px 0px 12px;  
+  padding: 2px 12px 0px 12px;
 }
 
 #mover-baixo {
@@ -113,7 +113,7 @@ label {
   color: #f0f8ff;
   font-weight: 700;
   border: 1px solid rgb(128, 128, 128);
-  padding: 7px 12px 7px 12px; 
+  padding: 7px 12px 7px 12px;
 }
 
 #apaga-tudo {
@@ -121,7 +121,7 @@ label {
   color: #f0f8ff;
   font-weight: 700;
   border: 1px solid #be4900;
-  padding: 7px 12px 7px 12px; 
+  padding: 7px 12px 7px 12px;
 }
 
 #salvar-tarefas {
@@ -129,7 +129,7 @@ label {
   color: #f0f8ff;
   font-weight: 700;
   border: 1px solid #0b518a;
-  padding: 7px 12px 7px 12px; 
+  padding: 7px 12px 7px 12px;
 }
 
 #erase-storage {
@@ -137,5 +137,16 @@ label {
   color: #f0f8ff;
   font-weight: 700;
   border: 1px solid #0b518a;
-  padding: 7px 12px 7px 12px; 
+  padding: 7px 12px 7px 12px;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  header {
+    font-size: 24px;
+  }
 }
