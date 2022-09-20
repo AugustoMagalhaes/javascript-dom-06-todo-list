@@ -9,7 +9,7 @@
 
 ### :computer: Sobre o projeto
 
-To-do list é uma aplicação web que permite ao usuário criar e excluir tarefas de um board. Para marcar uma tarefa como concluída basta dar um clique duplo na mesma, e ela ficará selecionada e com um risco. Caso existam tarefas marcadas como concluídas, há também a possibilidade de excluir apenas as concluídas. Ao clicar em uma tarefa, esta fica selecionada (fundo cinzo) e é possível excluir apenas a selecionada e também movê-la pra cima ou pra baixo na lista usando os botões de seta. Há a possibilidade de salvar a lista no localStorage e também de excluí-la dele.
+To-do list é uma aplicação web que permite ao usuário criar e excluir tarefas de um board. Ao clicar em uma tarefa, esta fica selecionada (fundo cinza) e é possível excluir apenas a selecionada e também movê-la pra cima ou pra baixo na lista usando os botões de seta. Para marcar uma tarefa como concluída basta dar um clique duplo na mesma, e ela ficará selecionada e com um risco. Caso existam tarefas marcadas como concluídas, há também a possibilidade de excluir apenas as concluídas. Há a possibilidade de salvar a lista no localStorage e também de excluí-la dele.
 
 ### 🚀 Como rodar localmente:
 
